@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <section class="posts">
+      <img src="cover.jpg" width="100%"/>
       <PostList v-for="year in years" :key="year" :year="year" />
     </section>
   </Layout>

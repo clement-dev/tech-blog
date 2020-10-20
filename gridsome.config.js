@@ -5,8 +5,8 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: '',
-  siteUrl: 'https://gridsome-starter-minimal-blog.netlify.com/',
+  siteName: 'cl3m3nt-d3v',
+  siteUrl: 'http://localhost:8080',
   siteDescription: 'Hey! Bienvenue sur mon blog',
   plugins: [
     {

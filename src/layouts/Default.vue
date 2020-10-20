@@ -47,11 +47,15 @@ body {
   line-height: 1.5;
   font-size:1.1em;
 }
-h1 #title{
-  font-family: "FrankRuhlLibre",Roboto,Arial,sans-serif;
+#title{
+  font-weight: lighter;
+  font-family: "Helvetica Neue", Helvetica, sans-serif, "Helvetica Roman", Icons;
 }
 h1 {
   font-family: "FrankRuhlLibreLight",Roboto,Arial,sans-serif;
+}
+p {
+  font-family: "Helvetica Neue", Helvetica, sans-serif, "Helvetica Roman", Icons;
 }
 .layout {
   max-width: 760px;
@@ -110,5 +114,9 @@ a:hover {
   @font-face {
     font-family: FrankRuhlLibreLight;
     src: url('../assets/FrankRuhlLibre-Light.ttf');
+  }
+  @font-face {
+    font-family: SpaceMono-Regular;
+    src: url('../assets/SpaceMono-Regular.ttf');
   }
 </style>
