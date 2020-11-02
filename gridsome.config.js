@@ -8,6 +8,7 @@ module.exports = {
   siteName: 'cl3m3nt-d3v',
   siteUrl: 'http://localhost:8080',
   siteDescription: 'Hey! Bienvenue sur mon blog',
+  icon: '/static/logo.png',
   plugins: [
     {
       use: '@gridsome/source-filesystem',

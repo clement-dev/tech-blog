@@ -80,7 +80,7 @@ query Post ($path: String!) {
 
   .article img {
     margin:auto;
-    width:80%;
+    width:90%;
     display:block;
     margin:10px auto;
   }
