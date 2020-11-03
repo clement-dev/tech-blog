@@ -5,6 +5,7 @@
       <p class="article-date"> {{ $page.post.date}} · <i>{{$page.post.timeToRead}} min read</i></p>
       <article v-html="$page.post.content" />
     </div>
+    <Disqus shortname="clement-dev" :identifier="$page.post.title" />
   </Layout>
 </template>
 

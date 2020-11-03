@@ -13,7 +13,7 @@ Cet article introduit une série d'articles qui viendront alimenter ce blog sur 
 
 Ce qui me paraît essentiel avant d'assister à un cours ou d'appréhender de nouveaux concepts, c'est d'avoir les outils qui vous permettront de prendre des notes. Au même titre que vous aviez des stylos, des feuilles et des classeurs lors de vos études primaires pour organiser vos contenus, nous allons par analogie nous satisfaire de la [syntaxe Markdown](https://www.markdownguide.org/basic-syntax/) pour structurer nos notes (titre, sous-titre, liens...) et substituer nos classeurs par un moteur de recherche. 
 
-L'outil avec lequel nous allons ranger nos notes se nomme Docusaurus. Docusaurus est une solution Open Source (MIT License) qui permet de déployer une documentation en HTML, la [versionner](https://fr.wikipedia.org/wiki/Gestion_de_versions)... Docusaurus permet de connecter nativement un moteur de recherche qui se nomme Algolia DocSearch et qui fonctionne en explorant le contenu de votre site Web toutes les 24 heures et en mettant tout le contenu dans un index Algolia. Ce contenu est ensuite interrogé directement depuis votre front-end à l'aide de l'API Algolia. Personnellement, je n'aime pas laisser trainer mes notes et données chez des tiers. C'est la raison pour laquelle je vous introduis MeiliSearch, une solution écrite en Rust:
+L'outil avec lequel nous allons ranger nos notes se nomme Docusaurus. Docusaurus est une solution Open Source (MIT License) qui permet de déployer une documentation en HTML, la [versionner](https://fr.wikipedia.org/wiki/Gestion_de_versions)... Docusaurus permet de connecter nativement un moteur de recherche qui se nomme Algolia DocSearch, celui-ci fonctionne en explorant le contenu de votre site Web toutes les 24 heures en mettant tout le contenu dans un index Algolia. Ce contenu est ensuite interrogé directement depuis votre front-end à l'aide de l'API Algolia. Personnellement, je n'aime pas laisser trainer mes notes et données chez des tiers. C'est la raison pour laquelle je vous introduis MeiliSearch, une solution écrite en Rust:
 > Un moteur de recherche open source, incroyablement rapide et hyper pertinent qui améliorera votre expérience de recherche.
  
 L'avantage principal est l'aspect souverain de celui-ci, nous pouvons le déployer en local à côté de notre Docusaurus sans laisser fuiter nos notes, documentations chez un Notion.so ou une quelconque solution Wiki. Pour se faire j'ai développé un petit projet en 2h00 qui ne demande qu'à être amélioré, il me permet d'indexer des documents Docusaurus dans MeiliSearch.
@@ -62,6 +62,7 @@ Nous venons créer le fichier docker-compose.yml. Pour l'instant il ne comporte 
 Comme son nom l'indique docker compose vous permettra de composer vos services, vous pouvez voir vos images Docker comme des briques de Lego que vous allez pouvoir assembler entre-elles afin de façonner votre application. 
 Je ne peux que vous encourager à aller voir la chaîne YouTube de Xavki qui vous sera très utile pour appréhender Docker.
 [https://www.youtube.com/watch?v=pMAGe6nTkws](https://www.youtube.com/watch?v=pMAGe6nTkws)
+
 **Arborescence**:
 ```
 docker-compose.yml
@@ -69,6 +70,7 @@ notes/
 ├── .docker/
 │   ├── Dockerfile.dev
 ```
+
 **docker-compose.yml**
 ```docker
 version: "3.7"
@@ -94,6 +96,7 @@ accéder de nouveau à l'URL http://localhost:3000
 
 # Installation de MeiliSearch
 Nous complétons le fichier docker-compose.yml pour y ajouter le service MeiliSearch.
+
 **docker-compose.yml**
 ```docker
 version: "3.7"
@@ -131,6 +134,7 @@ Vous devriez pouvoir accéder à l'URL [http://localhost:7700](http://lcoalhost:
 - Se rendre dans le dossier notes `cd notes`
 - Installer axios: `npm i axios`
 - Modifier le package.json pour lancer l'indexation au redémarrage de Docusaurus
+
 **package.json**
 ```bash
 "start:search": "node ./init-search.js && docusaurus start",
@@ -145,6 +149,7 @@ Nous pouvons créer un fichier init-search.js à la racine du dossier notes qui 
 notes/
 ├── init-search.js
 ```
+
 **init-search.js**
 ```jsx
 const glob = require("glob");
@@ -183,10 +188,12 @@ const processing = async () => {
 })();
 ```
 # Composant Search pour Docusaurus
+
 **Dépendances**
 ```bash
 npm i semantic-ui-react
 ```
+
 **Arborescence**
 ```bash
 notes/
@@ -197,6 +204,7 @@ notes/
 │           ├── index.js
 
 ```
+
 **index.js**
 ```jsx
 import React, { useEffect, useState } from "react";
@@ -277,13 +285,15 @@ Modifions le fichier `./notes/src/pages/index.js` en ajoutant l'import:
 import SearchBar from '../components/SearchBar'
 ```
 `./notes/src/css/custom.css`
-*custom.css*
+
+**custom.css**
 ```css
 .search{
   margin: 20px 0px;
 }
 ```
 `./notes/src/pages/index.js`
+
 **index.js**
 ```jsx
 <Layout
