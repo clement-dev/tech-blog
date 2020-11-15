@@ -38,13 +38,17 @@ query Post ($path: String!) {
 <style>
   .article {
     margin-top: 15px;
+    font-family:  var(--app-font-typo)
   }
 
   .article-title {
+    font-size: 1.8em;
+    text-align: center;
     margin-bottom:0;
   }
 
   .article-date {
+    text-align: center;
     color: var(--app-font-color);
     margin-top:0;
     font-size:.8em;
@@ -54,7 +58,6 @@ query Post ($path: String!) {
     padding: 10px 20px;
     margin: 0 0 20px;
     font-size: 17.5px;
-    border-left: 5px solid #eee;
   }
 
   .article table {
@@ -64,19 +67,21 @@ query Post ($path: String!) {
   }
 
   .article th {
+    font-family: "Helvetica Neue", Helvetica, sans-serif, "Helvetica Roman", Icons;
+    font-size: 0.8em;
     vertical-align: bottom;
-    border-bottom: 2px solid #ddd;
   }
 
   .article td {
-      border-top: 1px solid #ddd;
       padding: 8px;
       line-height: 1.42857143;
       vertical-align: top;
+      text-justify: auto;
+
   }
 
   .article tr:nth-child(odd) td {
-    background-color: #f9f9f9;
+    background-color: var(--app-background-color);
   }
 
   .article img {

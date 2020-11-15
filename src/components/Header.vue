@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <g-link to="/"><h1 id="title">{{siteName}}</h1></g-link>
+    <Logo/>
     <ClientOnly>
       <ThemeToggle />
     </ClientOnly>
@@ -8,9 +8,11 @@
 </template>
 
 <script>
+import Logo from "@/components/Logo";
 export default {
   props: ["siteName"],
   components: {
+    Logo,
     ThemeToggle: () => import('@/components/ThemeToggle')
   }
 };
