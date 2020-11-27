@@ -32,22 +32,31 @@ export default {
 :root {
   --app-background-color: #ffffff;
   --app-font-color: black;
+  --app-icon-color: #5659dae6;
+  --app-font-typo: "FrankRuhlLibreLight", Roboto, Arial, sans-serif;
 }
 
 [theme="dark"] {
   --app-background-color: #160a29;
   --app-font-color: white;
+  --app-icon-color: #5659dae6
 }
 
 [theme="sepia"] {
   --app-background-color: #f1e7d0;
   --app-font-color: #433422;
+  --app-icon-color: #5659dae6
+
 }
+[font="sans-serif"] {
+  --app-font-typo: "Helvetica Neue", Helvetica, sans-serif, "Helvetica Roman", Icons;
+}
+
 
 body {
   background-color: var(--app-background-color);
   color: var(--app-font-color);
-  font-family: "JosefinSans", -apple-system, system-ui, BlinkMacSystemFont,
+  font-family:"JosefinSans", -apple-system, system-ui, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -55,15 +64,24 @@ body {
   font-size: 1.1em;
 }
 #title {
-  font-size: 20px;
+  font-size: 1.6em;
   font-weight: lighter;
   font-family: "Helvetica Neue", Helvetica, sans-serif, "Helvetica Roman", Icons;
 }
 h1 {
-  font-family: "FrankRuhlLibreLight", Roboto, Arial, sans-serif;
+  font-size: 1.4em;
+  font-family: "Helvetica Neue", Helvetica, sans-serif, "Helvetica Roman", Icons;
+}
+h2 {
+  font-size: 1em;
+  font-family: "Helvetica Neue", Helvetica, sans-serif, "Helvetica Roman", Icons;
+}
+h3 {
+  font-size: 0.9em;
+  font-family: "Helvetica Neue", Helvetica, sans-serif, "Helvetica Roman", Icons;
 }
 p {
-  font-family: "Helvetica Neue", Helvetica, sans-serif, "Helvetica Roman", Icons;
+font-family: var(--app-font-typo)
 }
 .layout {
   max-width: 760px;
@@ -99,11 +117,26 @@ a:hover {
 }
 pre {
   border-radius: 14px;
-  background: #fcf8f3 !important;
+  background: rgb(238, 233, 233) !important;
 }
 img {
   width:100%;
   border-radius: 16px;
+}
+blockquote {
+  border-left: 5px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+  font-style: italic;
 }
 
 @media only screen and (max-width: 500px) {
