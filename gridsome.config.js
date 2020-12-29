@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'clement-dev',
-  siteUrl: 'clement-dev.netlify.app',
+  siteUrl: 'https://clement-dev.netlify.app',
   siteDescription: 'My home on the internet.',
   icon: '/static/logo.png',
   plugins: [
