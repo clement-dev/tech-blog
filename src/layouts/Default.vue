@@ -10,6 +10,7 @@
     <div class="footer">
       <div class="footer-links">
         <a target="_blank" href="https://twitter.com/cl3m3ntcode">Twitter</a>
+        <a target="_blank" href="https://www.linkedin.com/in/cl%C3%A9ment-dev-06aa401a0/">LinkedIn</a>
         <a target="_blank" href="https://github.com/clement-dev">Github</a>
         <a target="_blank" href="/sitemap.xml">Sitemap</a>
         <a target="_blank" href="/feed.xml">RSS Feed</a>
