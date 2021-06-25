@@ -78,7 +78,7 @@ théorique via la notion
 de [websémantique](https://fr.wikipedia.org/wiki/Web_s%C3%A9mantique#:~:text=Le%20Web%20s%C3%A9mantique%2C%20ou%20toile,Resource%20Description%20Framework%20(RDF).)
 et d'ontologies.
 
-Pour l'anecdote, j'ai récemment lu un article d'un employé d'Amazon ( entreprise que je suis bien loin d'admirer sur
+Pour l'anecdote, j'ai récemment lu un article d'un employé d'Amazon ( entreprise que je suis loin d'admirer sur
 bien des aspects), qui avait opté en interne pour une politique du "tout" document, si bien qu'une réunion ne peut se
 tenir si celle-ci n'est pas synthétisée en amont dans un document, ceci facilitant l'inclusion, le partage à des tiers,
 la construction d'un historique...
@@ -90,14 +90,14 @@ graphe:
 
 Mais il n'en est rien face aux nombreux avantages offerts par des outils qui permettent d'appréhender cette complexité
 avec des filtres... Avec un peu d'imagination, il est possible en corrélant le tag `#done` à des snapshots du graphes
-dans le temps, de suivre l'évolution de tâches en se ramenant à une série temporelle ou bien même, de quantifier un thème
+dans le temps, de suivre l'évolution de tâches en se ramenant à une série temporelle, de quantifier un thème
 pour évaluer la couverture d'une documentation.
 
 <img src="../project-init/documentation/illustration.jpg" alt="cat" style="width:60%"/>
 
 ## Documents fonctionnels
 
-Ah, la documentation fonctionnelle... Et bien figurez vous, je n'ai pas d'appétences particulières pour un secteur avec
+Ah, la documentation fonctionnelle... Figurez vous que je n'ai pas d'appétences particulières pour un secteur avec
 des process en tête, et ce n'est pas plus mal. Par contre je commence à avoir ma petite expérience dans le développement
 de logiciels. Je ne peux donc qu'apporter une vision partielle mais qui n'en reste pas moins nécessaire et suffisante à
 la conception d'une application. Je pense que le principe KISS peut également s'appliquer à la documentation, et pour
@@ -241,7 +241,7 @@ ou telle fonctionnalité pour justifier d'un choix: un lien vers une thèse, sta
 toute transparence cette doc ne sera lue que par des profils techniques.
 
 Mais comme vous l'avez certainement remarqué, ce que je viens d'écrire est assez décousu, comment organiser la
-rédaction? Par quel bout commencer? Et bien, à titre personnel j'ai adopté l'approche du modèle C4 (Context, Container,
+rédaction? Par quel bout commencer? À titre personnel j'ai adopté l'approche du modèle C4 (Context, Container,
 Component et Code) qui consiste simplement à changer l'échelle avec laquelle vous regardez l'application; en commençant
 par une modélisation utilisateur pour arriver à la documentation du code, d'où la nécessité d'avoir des documents
 formalisés issus de l'event storming que l'on appelle specs et qui se compose des différentes briques que j'ai énoncé
